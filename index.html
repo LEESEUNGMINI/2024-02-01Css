@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+  </style>
+  <script
+    src="https://kit.fontawesome.com/eca7d1bab1.js"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="./footer.css" />
+  <link rel="stylesheet" href="./section2.css" />
+  <link rel="stylesheet" href="./slide.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./section1.css" />
+  <body>
+    <header>
+      <!-- 헤더 배경이미지 -->
+      <!-- 컨테이너 -->
+      <div
+        id="container"
+        style="width: 100%; height: 100%; max-width: 1300px; position: relative"
+      >
+        <!-- NAV 부분 -->
+        <nav id="main_nav">
+          <!-- 로고  -->
+          <div
+            style="
+              width: 100%;
+              height: 100%;
+              max-width: 1200px;
+              position: relative;
+              display: flex;
+              margin: 0 0px 0 10px;
+            "
+          >
+            <h2
+              id="main_h2"
+              style="width: 100%; display: flex; align-items: center"
+            >
+            <a href="#"> <img
+                style="width: 70px; margin-right: 7.5px; margin-left: -20px"
+                src="./images/header_rogo.svg"
+                alt="rogo"
+              /></a>
+            </h2>
+            <ul id="base_ul" style="width:100%;color: black; text-decoration: none; list-style: none;
+            display: flex; justify-content: space-around;margin-top: 30px;gap: 20px;
+            ">
+              <a href="#section1"><li class="li_list">리모델링 패키지</li></a>
+              <a href="#slide_div"><li class="li_list">시공사례</li></a>
+              <a href="#section3"><li class="li_list">쇼룸</li></a>
+              <a href="#section3"><li class="li_list">이벤트</li></a>
+              <a href="#section3"><li class="li_list">상담신청</li></a>
+            </ul>
+            <!-- GNB 메뉴 -->
+            <div id="gnb_div">
+              <ul>
+                <li>회사소개</li>
+                <li>제품</li>
+                <li>유지관리 서비스</li>
+                <li>고객지원</li>
+                <li>채용안내</li>
+              </ul>
+            </div>
+            <!--  각종 아이콘-->
+            <div id="icon_div">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <input id="checkbox" type="checkbox" />
+              <label class="menu-toggle" id="menuToggle" for="checkbox"
+                ><i style="font-size: 30px" class="fa-solid fa-bars"></i
+              ></label>
+            </div>
+            <nav class="mobile-menu" id="mobileMenu">
+              <!-- 메뉴 항목들을 추가할 부분 -->
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  width: 100%;
+                  height: 60px;
+                  align-items: center;
+                "
+              >
+                <!-- X -->
+                <div
+                  style="
+                    color: black;
+                    font-size: 25px;
+                    margin-right: 20px;
+                    cursor: pointer;
+                    position: absolute;
+                    right: 10px;
+                  "
+                >
+                  <i id="menu" class="fa-solid fa-x"></i>
+                </div>
+              </div>
+              <!-- 인풋 검색창 -->
+              <div id="input_div">
+                <input type="text" placeholder="검색어를 입력해주세요." />
+                <i
+                  style="
+                    position: absolute;
+                    color: black;
+                    right: 30px;
+                    font-size: 25px;
+                  "
+                  class="fa-solid fa-magnifying-glass"
+                ></i>
+              </div>
+              <div
+                style="
+                  width: 100%;
+                  height: auto;
+                  display: flex;
+                  justify-content: center;
+                "
+              >
+                <div style="width: 90%; margin-top: 50px; color: black;">
+                  <ul id="hidden_ul">
+                    <div>
+                      <li><a id="a1" href="#">리모델링 패키지</a></li>
+                      <input id="input1" type="checkbox" />
+                      <label id="inputa" for="input1"
+                        ><i class="fa-solid fa-plus"></i
+                      ></label>
+                    </div>
+
+                    <ul id="open_ul" class="uluu">
+                      <li style="margin-left: 20px">트렌디 화이트</li>
+                      <li style="margin-left: 20px">트렌디 내추럴</li>
+                      <li style="margin-left: 20px">서비스 안내</li>
+                    </ul>
+
+                    <div>
+                      <li><a id="a2" href="#">시공사례</a></li>
+                      <input id="input2" type="checkbox" />
+                      <label id="inputb" for="input2"
+                        ><i id="inputt" class="fa-solid fa-plus"></i
+                      ></label>
+                    </div>
+                    <ul id="open_ul1" class="uluu">
+                      <li style="margin-left: 20px">봄을 만난 집</li>
+                    </ul>
+                    <div>
+                      <li><a id="a3" href="#">쇼룸</a></li>
+                      <input id="input3" type="checkbox" />
+                      <label id="inputc" for="input3"
+                        ><i class="fa-solid fa-plus"></i
+                      ></label>
+                    </div>
+                    <ul id="open_ul2" class="uluu">
+                      <li style="margin-left: 20px">쇼룸</li>
+                    </ul>
+                    <div>
+                      <li><a id="a4" href="#">이벤트</a></li>
+                      <input id="input4" type="checkbox" />
+                      <label id="inputd" for="input4"
+                        ><i class="fa-solid fa-plus"></i
+                      ></label>
+                    </div>
+                    <ul id="open_ul3" class="uluu">
+                      <li style="margin-left: 20px">이벤트</li>
+                    </ul>
+                    <div>
+                      <li><a id="a5" href="#">상담 신청</a></li>
+                      <input id="input5" type="checkbox" />
+                      <label id="inpute" for="input5"
+                        ><i class="fa-solid fa-plus"></i
+                      ></label>
+                    </div>
+                    <ul id="open_ul4" class="uluu">
+                      <li style="margin-left: 20px">온라인 무료 견적</li>
+                      <li style="margin-left: 20px">리모델링 상담 신청</li>
+                      <li style="margin-left: 20px">자주 묻는 질문</li>
+                      <li style="margin-left: 20px">1:1 문의</li>
+                    </ul>
+                  </ul>
+                </div>
+              </div>
+              <!-- 회사소개서 다운로드 -->
+              <div
+                style="
+                  width: 100%;
+                  height: 70px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  margin-top: 40px;
+                "
+              >
+                <div
+                id="Hansol_doun"
+                  style="
+                    width: 95%;
+                    height: 80px;
+                    padding: 17px;
+                    background-image: linear-gradient(
+                      to right,
+                      #fcb69f 0%,
+                      #ffecd2 100%
+                    );
+                    font-weight: bold;
+                    border-radius: 10px;
+                    padding-left: 20px;
+                  "
+                >
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                    "
+                  >
+                    <p>한솔봄<br />회사소개서 다운로드</p>
+                    <i
+                      style="font-size: 25px"
+                      class="fa-solid fa-down-long"
+                    ></i>
+                  </div>
+                </div>
+                <div></div>
+              </div>
+            </nav>
+            <script src="script.js"></script>
+          </div>
+        </nav>
+
+        <!-- 끝 -->
+        <script src="./video.js"></script>
+
+        <div id="motion">
+          <!-- 제목 -->
+          <div>
+            <h3 class="motion_h3" style="margin-left: 30px">한솔그룹이 만든</h3>
+            <h3 class="motion_h3" style="margin-left: 30px">
+              인테리어 브랜드 한솔봄
+            </h3>
+          </div>
+          <!-- 내용 -->
+          <div>
+            <p class="motion_p" style="margin-left: 30px">
+              투명한 견적과 정직한 가격으로<br />
+              좋은 공간을 만듭니다.
+            </p>
+          </div>
+          <!-- 모션 -->
+          <div id="motion_i" class="motion_i">
+            <p style="font-size: 16px; color: #0070cd">
+              자세히보기<i class="fa-solid fa-arrow-right"></i
+              ><span class="view_span motion_i"> </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Section1 -->
+    <section id="section1">
+      <div id="section1_container">
+        <!-- h2 태그들 -->
+        <div id="section1_Main_div">
+          <div id="section1_Main_div2">
+            <h2 id="section1_Main_div2_h2">
+              모두가 공간과 삶에 행복을 채워갈 수 있도록
+              <br id="main_br" />인테리어 경험을 제공합니다
+            </h2>
+          </div>
+        </div>
+        <!-- 왼쪽 이미지 -->
+        <div>
+          <div id="section1_left_img_div" class="animated-element">
+            <img
+              src="https://www.hansoldeco.co.kr/views/res/imgs/main/sec_01_img_01_m@3x.jpg"
+              alt=""
+            />
+            <!-- 왼쪽 글 -->
+            <div id="left_text_div">
+              <p>
+                한솔데코는 인테리어를 하며 떠오르는 의문과 걱정을 해소할 수
+                있도록 다양한 시도를 통해 변화를 주도합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 오른쪽 이미지 -->
+        <div>
+        <div id="right_text_div" class="animated-element">
+          <img
+            src="https://www.hansoldeco.co.kr/views/res/imgs/main/sec_01_img_02_m@3x.jpg"
+            alt=""
+          />
+          <!-- 오른쪽 글  -->
+          <div>
+            <p>
+              우리는 많은 시간을 주거 공간에서 보냅니다. 집은 삶의 만족과
+              안정감을 줄 뿐 아니라, 나를 표현하고 취향을 드러내는 공간입니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 움직이는 배경 div -->
+    <div id="slide_div">
+      <div id="slide_divv">
+        <div id="slide_div2"></div>
+      </div>
+    </div>
+    <!-- 슬라이더 섹션2 -->
+    <section id="section2">
+      <div id="container2">
+        <!-- 백그라운드 div -->
+        <div></div>
+        <div>
+          <!-- 섹션2 h2 -->
+          <div
+            id="section2_h2"
+            style="
+              width: 100%;
+              height: 100px;
+              display: flex;
+              justify-content: center;
+            "
+          >
+            <h2>한솔데코의 <br />사업영역을 소개합니다</h2>
+          </div>
+          <!-- 백그라운드 우측 -->
+          <div claa="section_main_div">
+            <!-- 첫번쨰 공간 -->
+            <div class="section2_div">
+              <div
+                class="right_bg animated-element"
+                style="
+                  background-image: url('https://www.vhom.co.kr/images/ti-guide/tw/ti-guide__showcase-preview--image0-8291bf3b9b6454365ee062f446914b22.jpg');
+                "
+              ></div>
+              <!-- 집 이미지 왼쪽 -->
+              <img
+                class="animated-element"
+                src="https://www.hansoldeco.co.kr/views/res/imgs/main/sec_02_img_01_01@3x.png"
+                alt=""
+              />
+              <div class="right_text">
+                <h2>자재유통</h2>
+                <p>
+                  인테리어에 대한 전문 지식과 노하우를 바탕으로 최고의 품질을
+                  가진 실내 건축자재만을 엄선하여 유통합니다.
+                </p>
+                <p style="font-size: 16px; color: #0070cd">
+                  자세히보기<i class="fa-solid fa-arrow-right"></i>
+                </p>
+              </div>
+            </div>
+            <!-- 두번쨰 공간 -->
+            <div class="section2_div">
+              <div
+                class="right_bg animated-element"
+                style="
+                  background-image: url('https://www.vhom.co.kr/images/ti-guide/tn/ti-guide__showcase-preview--image3-7853937b2567fe1b161e8ebab39c4b91.jpg');
+                "
+              ></div>
+              <!-- 집 이미지 왼쪽 -->
+              <img
+                class="animated-element"
+                src="https://www.hansoldeco.co.kr/views/res/imgs/main/sec_02_img_02_01@3x.png"
+                alt=""
+              />
+              <div class="right_text">
+                <h2>실내건축공사</h2>
+                <p>
+                  실내 건축물의 안정성과 기능성뿐 아니라 디자인까지 다양한
+                  측면을 고려하여 완성도 높은 공간을 제시합니다.
+                </p>
+                <p style="font-size: 16px; color: #0070cd">
+                  자세히보기<i class="fa-solid fa-arrow-right"></i>
+                </p>
+              </div>
+            </div>
+            <!-- 세번쨰 공간 -->
+            <div class="section2_div animated-element">
+              <div
+                class="right_bg"
+                style="
+                  background-image: url('https://www.vhom.co.kr/images/ti-guide/tw/ti-guide__showcase-preview--image2-1fddd7c5c195f85cdc2920fc70f0e6b6.jpg');
+                "
+              ></div>
+              <!-- 집 이미지 왼쪽 -->
+              <img
+                class="animated-element"
+                src="https://www.hansoldeco.co.kr/views/res/imgs/main/sec_02_img_01_01@3x.png"
+                alt=""
+              />
+              <div class="right_text">
+                <h2>앱·웹 및 AI</h2>
+                <p>
+                  중고마켓, 하자 점검 등 다양한 인테리어 플랫폼을 제작하여
+                  고객의 사용 목적과 활용 방식에 맞는 최선의 서비스를
+                  제공합니다.
+                </p>
+                <p style="font-size: 16px; color: #0070cd">
+                  자세히보기<i class="fa-solid fa-arrow-right"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!--  -->
+          <div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 인재채용 지원하기 섹션 -->
+    <section
+      id="section3"
+      style="
+        width: 100%;
+        height: 500px;
+        background: fixed;
+        display: flex;
+        align-items: center;
+        background-image: url('	https://www.hansoldeco.co.kr/views/res/imgs/main/sec_03_bg_01_m@3x.jpg');
+        background-position: center;
+        background-size: cover;
+        color: white;
+      "
+    >
+      <div style="width: 100%; height: 80%; padding: 30px; margin-top: 30px">
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            position: relative;
+          "
+        >
+          <h2>
+            한솔데코와 함께 공간과<br />
+            일상의 변화를 만들어 보세요
+          </h2>
+          <p style="color: white">
+            한솔데코는 끊임없는 호기심과 도전으로 일상의 행복을 <br />
+            만들어가는 사람들의 모임입니다. 함께 인테리어를 통한 <br />
+            즐거운 일상을 만들어 보실래요?
+          </p>
+          <p style="font-size: 16px; color: #fff">
+            인재채용 지원하기<i class="fa-solid fa-arrow-right"></i
+            ><span
+              class="view_span"
+              style="
+                position: absolute;
+                display: inline-block;
+                left: 110px;
+                top: 195px;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                background: rgba(255, 2255, 255, 0.3);
+                cursor: pointer;
+              "
+            >
+            </span>
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- 푸터 -->
+    <footer>
+      <!-- 한솔데코 -->
+      <div>
+        <p>
+          인테리어를 통해 행복한 공간과 경험을 <br />
+          제공하는 <b>한솔데코</b>
+        </p>
+      </div>
+      <!-- 소개 -->
+      <div>
+        <span style="color: #959795">대표 </span><span>황순영</span><br />
+        <span style="color: #959795">주소</span>
+        <span>서울 송파구 백제고분로 295 JS빌딩 5층</span><br />
+        <span style="color: #959795">문의</span>
+        <span>hansoldeco1@naver.com</span><br />
+        <span style="color: #959795">대표번호</span> <span>02-868-5110~1</span
+        ><br />
+        <span style="color: #959795">사업자등록번호</span>
+        <span>113-86-86986</span><br />
+      </div>
+      <!-- 개인처리 방침 -->
+      <div>
+        <p style="font-size: 15px">
+          Copyright ⓒ 한솔데코. All Rights Reserved.
+        </p>
+        <span>개인정보처리방침</span> <span>이용약관</span>
+      </div>
+    </footer>
+    <script src="./slide.js"></script>
+    <script src="./scroll.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

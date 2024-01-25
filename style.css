@@ -1,0 +1,353 @@
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  scroll-behavior: smooth;
+}
+a {
+  scroll-behavior: smooth;
+}
+/* 헤더 */
+header {
+  width: 100%;
+  height: 90vh;
+  background-image: url(./images/header_bg2.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+#container {
+  padding: 0px 0px 0px 50px;
+}
+#base_ul li {
+  display: none;
+}
+#motion {
+  position: absolute;
+  top: 150px;
+  left: 0px;
+  color: black;
+  padding: 7px;
+}
+#motion h3 {
+  font-size: 40px;
+  line-height: 45px;
+}
+#motion p {
+  font-size: 20px;
+  margin: 30px 0 120px 0;
+}
+#main_br {
+  display: none;
+}
+.li_list {
+  cursor: pointer;
+}
+#base_ul a {
+  color: black;
+  text-decoration: none;
+}
+.li_list:hover {
+  color: #107af2;
+}
+/* 비디오 안에 흘러가는 바 */
+#progress-bar-container {
+  width: 80%;
+  margin: 20px auto;
+  background-color: #ddd;
+  height: 3px;
+  position: relative;
+  border-radius: 10px;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: #4caf50;
+  position: absolute;
+}
+
+#time-display {
+  text-align: center;
+  margin-top: 10px;
+}
+/* Nav */
+#main_nav {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 68px;
+  padding: 0 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  padding: 0 20px 0 50px;
+  justify-content: center;
+  transition: top 0.3s ease-in-out;
+}
+#main_nav.scrolled {
+  background-color: #fff; /* 스크롤 시 배경색 변경 */
+  color: #000; /* 스크롤 시 텍스트 색상 변경 */
+  transition: 0.5s;
+  border-bottom: 1px solid #0072bc;
+}
+#main_nav h2.scrolled {
+  color: #0072bc;
+}
+#main_nav h2 p.scrolled {
+  color: #808285;
+}
+#main_nav #right_Help.scrolled {
+  background-color: #0072bc;
+}
+
+#gnb_div ul {
+  display: flex;
+  display: none;
+}
+
+#gnb_div li {
+  list-style: none;
+  margin: 0 30px;
+}
+#main_nav {
+  height: 80px;
+  transition: height 0.3s ease; /* 높이 속성에 부드러운 효과를 추가합니다. */
+}
+#mobileMenu {
+  background-color: #ffffff;
+}
+/* 우측 */
+#icon_div {
+  display: none;
+}
+#right_Help {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 35px;
+  background: rgba(133, 133, 133, 0.5);
+  color: white;
+  padding: 5px 10px 5px 10px;
+  border-radius: 30px;
+  border: none;
+}
+/* 숨김 토글 메뉴 */
+.menu-toggle {
+  color: #000;
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  top: 30px;
+  right: 0px;
+}
+#checkbox {
+  display: none;
+}
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%; /* 초기에는 화면 밖으로 숨겨둠 */
+  width: 100%;
+  /* 메뉴 너비 조절 */
+  height: 100%;
+  background-color: #fff;
+
+  box-sizing: border-box;
+  transition: right 0.5s ease; /* 우측으로 나타나고 사라지는 애니메이션 적용 */
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: start;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-menu li {
+  margin-bottom: 20px;
+}
+.mobile-menu li:last-child {
+  margin: 0;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+/* <!-- 인풋 검색창 --> */
+#input_div {
+  width: 100%;
+  height: 80px;
+  background: #e4f2fe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#input_div input {
+  width: 95%;
+  height: 45px;
+  outline: none;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  position: relative;
+}
+#hidden_ul div {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#hidden_ul a {
+}
+#hidden_ul i {
+  color: black;
+  cursor: pointer;
+}
+#hidden_ul input {
+  display: none;
+}
+.uluu {
+  font-size: 16px;
+  background: #f3f3f3;
+  width: 100%;
+  height: 0;
+  padding: 10px;
+  transition-duration: 0.5s;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.view_span {
+  transition: all 0.3s ease-in-out; /* 부드러운 효과를 위한 transition 속성 추가 */
+}
+
+.view_span:hover {
+  transform: scale(1.4); /* 호버 상태에서 크기를 1.2배로 확대 */
+  background: rgba(204, 226, 242, 0.7); /* 호버 상태에서 배경색 변경 */
+}
+/*  */
+.animated-element {
+  transition: transform 10s ease;
+  will-change: transform;
+}
+
+#left_text_div,
+#right_text_div {
+  width: 50%;
+  height: 100vh;
+}
+
+/*  */
+/* 챗 쥐피티 */
+@keyframes Down {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0px;
+  }
+}
+@keyframes Up {
+  from {
+    top: 0px;
+  }
+  to {
+    top: -100px;
+  }
+}
+.animated-element {
+  opacity: 0;
+  transform: translateY(80px); /* 화면 아래로 숨겨둠 */
+  transition: opacity 2s ease, transform 0.8s ease;
+}
+.motion_h3 {
+  position: relative;
+  animation: textUp 2s ease-out forwards;
+}
+.motion_p {
+  position: relative;
+  animation: textUp 3.5s ease-out forwards;
+}
+.motion_i {
+  position: relative;
+  animation: textUp 3.5s ease-out forwards;
+}
+#motion_i {
+  position: absolute;
+  left: 40px;
+  top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#motion span {
+  position: absolute;
+  display: inline-block;
+  left: 63px;
+  top: -8px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: rgba(204, 226, 242, 0.4);
+  cursor: pointer;
+}
+@keyframes textUp {
+  0% {
+    bottom: -80px;
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 800px) {
+  #motion {
+    padding-top: 100px;
+  }
+  #motion h3 {
+    font-size: 45px;
+  }
+  #motion p {
+    font-size: 25px;
+  }
+
+  #motion_i {
+    position: absolute;
+    left: 40px;
+    top: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #motion span {
+    top: -28px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .menu-toggle {
+    display: none;
+  }
+  #base_ul li {
+    display: block;
+  }
+}

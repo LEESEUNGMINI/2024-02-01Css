@@ -1,0 +1,143 @@
+#section1 {
+  background-image: linear-gradient(to top, #fefaf1 0%, #fff 75%, #fefaf1 100%);
+}
+section p {
+  color: #767676;
+}
+
+#section1_Main_div {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+#section1_Main_div2 {
+  margin-top: 200px;
+  width: 80%;
+  height: 100%;
+}
+#section1_container {
+  position: relative;
+  height: 1800px;
+  width: 100%;
+}
+#section1_Main_div2 h2 {
+  text-align: center;
+  width: 100%;
+}
+/* 왼쪽 이미지 글 */
+#section1_left_img_div {
+  margin-top: 50px;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 300px;
+  left: 50px;
+}
+#section1_left_img_div img {
+  width: 100%;
+  height: 500px;
+}
+#left_text_div {
+  width: 350px;
+  color: #767676;
+}
+
+/* 오른쪽 이미지  , 글  */
+#right_text_div {
+  width: 500px;
+  height: 600px;
+  position: absolute;
+  bottom: 0;
+  right: 50px;
+}
+#right_text_div img {
+  width: 100%;
+  height: 500px;
+}
+@media screen and (max-width: 800px) {
+  #section1_left_img_div {
+    margin-top: 50px;
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    top: 300px;
+    left: 10px;
+  }
+  #right_text_div {
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+  }
+}
+@media screen and (min-width: 801px) {
+  #section1_left_img_div {
+    margin-top: 50px;
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    top: 250px;
+    left: 10px;
+  }
+  #right_text_div {
+    width: 600px;
+    height: 700px;
+    position: absolute;
+    bottom: -70px;
+    right: 10px;
+  }
+
+  #section1_left_img_div img {
+    width: 100%;
+    height: auto;
+  }
+  #right_text_div img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #section1_left_img_div {
+    width: 30vw;
+    height: 300px;
+    top: 400px;
+    left: 60px;
+  }
+  #right_text_div {
+    width: 30vw;
+    height: 200px;
+    bottom: 700px;
+    right: 60px;
+  }
+  #left_text_div {
+    width: 30vw;
+  }
+  #section1_left_img_div img {
+    width: 100%;
+    height: auto;
+  }
+  #right_text_div img {
+    width: 100%;
+    height: auto;
+    top: 50%;
+  }
+
+  #section1_Main_div2 {
+    width: 50%;
+  }
+  #section1_Main_div {
+    position: absolute;
+    top: 400px;
+    font-size: 25px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  #section1_container {
+    height: 1300px;
+  }
+}

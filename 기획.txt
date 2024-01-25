@@ -1,0 +1,13 @@
+주제 : 한솔 봄 리뉴얼
+
+기획의도 : 한솔 봄의 디자인 커스텀마이징과 반응형 웹을 구현하기 위함.
+
+벤치마킹 : 내가 원하는 디자인의 사이트 -> https://www.hansoldeco.co.kr/
+	: 내가 원하는 내용의 사이트 -> https://www.vhom.co.kr/
+
+와이어프레임 :
+
+스타일 가이드 : 폰트 ->  "NANUMSQUARE-700, 400", sans-serif"
+	      : 색상 ->  #F5F2EC , #FFFFFF
+
+
