@@ -42,5 +42,10 @@ window.addEventListener("scroll", function () {
   }
 });
 //
-
+// window.addEventListener("wheel", () => {
+//   let wheeler = window.scrollY;
+//   if(wheeler > 100){
+//     wheeler ==100
+//   }
+// });
 //
