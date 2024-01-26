@@ -80,7 +80,7 @@
   }
   .right_bg {
     width: 50%;
-    height: 110vh;
+    height: 120vh;
   }
   .right_text {
     width: 100%;
@@ -107,9 +107,9 @@
     text-align: center;
   }
   #section2 {
-    height: 3000px;
+    height: 3300px;
   }
   .section2_div {
-    height: 1000px;
+    height: 1100px;
   }
 }

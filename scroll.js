@@ -140,7 +140,7 @@ window.addEventListener("scroll", () => {
     second.style.transition = "position 0.3s ease";
     third.style.transition = "position 0.3s ease";
 
-    if (0 < scrll < 2859 || 4609 < scrll) {
+    if (0 < scrll < 2859 || 4911 < scrll) {
       first.style.position = "absolute";
     }
     if (scrll >= 2676 && scrll < 3418) {
@@ -149,14 +149,14 @@ window.addEventListener("scroll", () => {
       first.style.zIndex = "1";
       second.style.zIndex = "0";
       third.style.zIndex = "0";
-    } else if (scrll >= 3419 && scrll < 4078) {
+    } else if (scrll >= 3418 && scrll < 4178) {
       first.style.position = "absolute";
       first.style.zIndex = "0";
       third.style.zIndex = "1";
       second.style.position = "fixed";
       second.style.top = "0";
       second.style.zIndex = "2";
-    } else if (scrll >= 4079 && scrll < 4608) {
+    } else if (scrll >= 4178 && scrll < 4911) {
       second.style.position = "absolute";
       second.style.zIndex = "0";
       third.style.position = "fixed";
