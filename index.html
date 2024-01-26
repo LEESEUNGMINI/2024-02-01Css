@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
   </style>
@@ -17,6 +18,38 @@
   <link rel="stylesheet" href="./slide.css" />
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="./section1.css" />
+  <style>
+    /* 추가적인 CSS 스타일은 여기에 작성하세요 */
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .section {
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .section > div {
+      width: 50%;
+      overflow: hidden;
+      transition: transform 0.8s ease-in-out;
+    }
+
+    .section .left-content {
+      transform: translateY(100%);
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .section .right-bg {
+      transform: translateY(0);
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+    }
+  </style>
   <body>
     <header>
       <!-- 헤더 배경이미지 -->
@@ -343,7 +376,8 @@
             <div class="section2_div">
 
               <div
-                class="right_bg animated-element"
+              id="div_first"
+                class="right_bg"
                 style="
                   background-image: url('https://www.vhom.co.kr/images/ti-guide/tw/ti-guide__showcase-preview--image0-8291bf3b9b6454365ee062f446914b22.jpg');
                 "
@@ -370,7 +404,8 @@
             <!-- 두번쨰 공간 -->
             <div class="section2_div">
               <div
-                class="right_bg animated-element"
+              id="div_second"
+                class="right_bg"
                 style="
                   background-image: url('https://www.vhom.co.kr/images/ti-guide/tn/ti-guide__showcase-preview--image3-7853937b2567fe1b161e8ebab39c4b91.jpg');
                 "
@@ -395,8 +430,9 @@
             </div>
             </div>
             <!-- 세번쨰 공간 -->
-            <div class="section2_div animated-element">
+            <div class="section2_div">
               <div
+              id="div_third"
                 class="right_bg"
                 style="
                   background-image: url('https://www.vhom.co.kr/images/ti-guide/tw/ti-guide__showcase-preview--image2-1fddd7c5c195f85cdc2920fc70f0e6b6.jpg');
@@ -513,6 +549,7 @@
         <span>개인정보처리방침</span> <span>이용약관</span>
       </div>
     </footer>
+    <script src="./jQury.js"></script>
     <script src="./slide.js"></script>
     <script src="./scroll.js"></script>
     <script src="script.js"></script>
