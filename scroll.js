@@ -126,7 +126,6 @@ window.addEventListener("scroll", function () {
 // 가로 1280px
 window.addEventListener("scroll", () => {
   let scrll = window.scrollY;
-  console.log(scrll);
 
   let first = document.querySelector("#div_first");
   let second = document.querySelector("#div_second");

@@ -308,6 +308,12 @@ header {
   background: rgba(204, 226, 242, 0.4);
   cursor: pointer;
 }
+@media screen and (max-width: 429px) {
+  #motion span {
+    display: none;
+  }
+}
+
 @keyframes textUp {
   0% {
     bottom: -80px;
