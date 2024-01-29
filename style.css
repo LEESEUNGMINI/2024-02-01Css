@@ -93,6 +93,7 @@ header {
   justify-content: center;
   transition: top 0.3s ease-in-out;
 }
+
 #main_nav.scrolled {
   background-color: #fff; /* 스크롤 시 배경색 변경 */
   color: #000; /* 스크롤 시 텍스트 색상 변경 */

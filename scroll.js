@@ -122,6 +122,7 @@ window.addEventListener("scroll", function () {
 //   }
 // });
 
+//
 // 가로 1280px
 window.addEventListener("scroll", () => {
   let scrll = window.scrollY;
@@ -139,28 +140,47 @@ window.addEventListener("scroll", () => {
     first.style.transition = "position 0.3s ease";
     second.style.transition = "position 0.3s ease";
     third.style.transition = "position 0.3s ease";
+    first.style.top = "0";
+    second.style.top = "0";
+    third.style.top = "0";
 
     if (0 < scrll < 2859 || 4911 < scrll) {
       first.style.position = "absolute";
     }
     if (scrll >= 2676 && scrll < 3418) {
       first.style.position = "fixed";
-      first.style.top = "0";
+
       first.style.zIndex = "1";
+      // 투명도
+      first.style.opacity = "1";
+      second.style.opacity = "0";
+      third.style.opacity = "0";
+      first.style.animation = "changeBackground 1s ease";
+
       second.style.zIndex = "0";
       third.style.zIndex = "0";
     } else if (scrll >= 3418 && scrll < 4178) {
       first.style.position = "absolute";
       first.style.zIndex = "0";
+      first.style.animation = "none";
+      first.style.opacity = "0";
+      second.style.opacity = "1";
+      third.style.opacity = "0";
+      second.style.animation = "changeBackground 1s ease";
+
       third.style.zIndex = "1";
       second.style.position = "fixed";
-      second.style.top = "0";
       second.style.zIndex = "2";
     } else if (scrll >= 4178 && scrll < 4911) {
       second.style.position = "absolute";
       second.style.zIndex = "0";
+      second.style.animation = "none";
+      first.style.opacity = "0";
+      second.style.opacity = "0";
+      third.style.opacity = "1";
+
+      third.style.animation = "changeBackground 1s ease";
       third.style.position = "fixed";
-      third.style.top = "0";
       third.style.zIndex = "3";
     } else {
       first.style.zIndex = "3";
@@ -169,64 +189,142 @@ window.addEventListener("scroll", () => {
       first.style.position = "absolute";
       second.style.position = "absolute";
       third.style.position = "absolute";
+      first.style.animation = "none";
+      second.style.animation = "none";
+      third.style.animation = "none";
     }
   }
 });
+
+//
+// // 가로 1280px
+// window.addEventListener("scroll", () => {
+//   let scrll = window.scrollY;
+//   console.log(scrll);
+
+//   let first = document.querySelector("#div_first");
+//   let second = document.querySelector("#div_second");
+//   let third = document.querySelector("#div_third");
+
+//   // 초기 상태로 되돌리기 위한 스크롤 범위 지정
+//   const resetScrollRange = 2900;
+
+//   if (window.innerWidth >= 1280) {
+//     // 부드러운 효과를 위한 transition 추가
+//     first.style.transition = "position 0.3s ease";
+//     second.style.transition = "position 0.3s ease";
+//     third.style.transition = "position 0.3s ease";
+
+//     if (0 < scrll < 2859 || 4911 < scrll) {
+//       first.style.position = "absolute";
+//     }
+//     if (scrll >= 2676 && scrll < 3418) {
+//       first.style.position = "fixed";
+//       first.style.top = "0";
+//       first.style.zIndex = "1";
+//       // 투명도
+//       first.style.opacity = "1";
+//       second.style.opacity = "0";
+//       third.style.opacity = "0";
+//       first.style.animation = "changeBackground 1s ease-in-out";
+//       // animation: changeBackground 5s ease-in-out;
+
+//       second.style.zIndex = "0";
+//       third.style.zIndex = "0";
+//     } else if (scrll >= 3418 && scrll < 4178) {
+//       first.style.position = "absolute";
+//       first.style.zIndex = "0";
+
+//       first.style.opacity = "0";
+//       second.style.opacity = "1";
+//       third.style.opacity = "0";
+//       second.style.animation = "changeBackground 1s ease-in-out";
+
+//       third.style.zIndex = "1";
+//       second.style.position = "fixed";
+//       second.style.top = "0";
+//       second.style.zIndex = "2";
+//     } else if (scrll >= 4178 && scrll < 4911) {
+//       second.style.position = "absolute";
+//       second.style.zIndex = "0";
+
+//       first.style.opacity = "0";
+//       second.style.opacity = "0";
+//       third.style.opacity = "1";
+
+//       third.style.animation = "changeBackground 1s ease-in-out";
+
+//       third.style.position = "fixed";
+//       third.style.top = "0";
+//       third.style.zIndex = "3";
+//     } else {
+//       first.style.zIndex = "3";
+//       second.style.zIndex = "2";
+//       third.style.zIndex = "1";
+//       first.style.position = "absolute";
+//       second.style.position = "absolute";
+//       third.style.position = "absolute";
+//       first.style.animation = "none";
+//       second.style.animation = "none";
+//       third.style.animation = "none";
+//     }
+//   }
+// });
 
 // 가로 해상도가 900에서 1000 사이인 경우에만 실행
 
-window.addEventListener("scroll", () => {
-  let scrll = window.scrollY;
-  console.log(scrll);
+// window.addEventListener("scroll", () => {
+//   let scrll = window.scrollY;
+//   console.log(scrll);
 
-  let first = document.querySelector("#div_first");
-  let second = document.querySelector("#div_second");
-  let third = document.querySelector("#div_third");
+//   let first = document.querySelector("#div_first");
+//   let second = document.querySelector("#div_second");
+//   let third = document.querySelector("#div_third");
 
-  // 초기 상태로 되돌리기 위한 스크롤 범위 지정
-  const resetScrollRange = 2900;
+//   // 초기 상태로 되돌리기 위한 스크롤 범위 지정
+//   const resetScrollRange = 2900;
 
-  if (window.innerWidth >= 900 && window.innerWidth <= 1000) {
-    if (0 < scrll < 3134 || 5200 < scrll) {
-      first.style.transition = "position 0.3s ease";
-      first.style.position = "absolute";
-    }
-    if (scrll >= 3175 && scrll < 3661) {
-      first.style.transition = "position 0.3s ease";
-      first.style.position = "fixed";
-      first.style.top = "0";
-      first.style.zIndex = "1";
-      second.style.zIndex = "0";
-    } else if (scrll >= 3661 && scrll < 4476) {
-      first.style.transition = "position 0.3s ease";
-      first.style.position = "absolute";
-      first.style.zIndex = "0";
-      third.style.zIndex = "1";
-      second.style.transition = "position 0.3s ease";
-      second.style.position = "fixed";
-      second.style.top = "0";
-      second.style.zIndex = "2";
-    } else if (scrll >= 4476 && scrll < 4776) {
-      second.style.transition = "position 0.3s ease";
-      second.style.position = "absolute";
-      second.style.zIndex = "0";
-      third.style.transition = "position 0.3s ease";
-      third.style.position = "fixed";
-      third.style.top = "0";
-      third.style.zIndex = "3";
-    } else {
-      first.style.transition = "position 0.3s ease";
-      first.style.zIndex = "3";
-      second.style.transition = "position 0.3s ease";
-      second.style.zIndex = "2";
-      third.style.transition = "position 0.3s ease";
-      third.style.zIndex = "1";
-      first.style.position = "absolute";
-      second.style.position = "absolute";
-      third.style.position = "absolute";
-    }
-  }
-});
+//   if (window.innerWidth >= 900 && window.innerWidth <= 1000) {
+//     if (0 < scrll < 3134 || 5200 < scrll) {
+//       first.style.transition = "position 0.3s ease";
+//       first.style.position = "absolute";
+//     }
+//     if (scrll >= 3175 && scrll < 3661) {
+//       first.style.transition = "position 0.3s ease";
+//       first.style.position = "fixed";
+//       first.style.top = "0";
+//       first.style.zIndex = "1";
+//       second.style.zIndex = "0";
+//     } else if (scrll >= 3661 && scrll < 4476) {
+//       first.style.transition = "position 0.3s ease";
+//       first.style.position = "absolute";
+//       first.style.zIndex = "0";
+//       third.style.zIndex = "1";
+//       second.style.transition = "position 0.3s ease";
+//       second.style.position = "fixed";
+//       second.style.top = "0";
+//       second.style.zIndex = "2";
+//     } else if (scrll >= 4476 && scrll < 4776) {
+//       second.style.transition = "position 0.3s ease";
+//       second.style.position = "absolute";
+//       second.style.zIndex = "0";
+//       third.style.transition = "position 0.3s ease";
+//       third.style.position = "fixed";
+//       third.style.top = "0";
+//       third.style.zIndex = "3";
+//     } else {
+//       first.style.transition = "position 0.3s ease";
+//       first.style.zIndex = "3";
+//       second.style.transition = "position 0.3s ease";
+//       second.style.zIndex = "2";
+//       third.style.transition = "position 0.3s ease";
+//       third.style.zIndex = "1";
+//       first.style.position = "absolute";
+//       second.style.position = "absolute";
+//       third.style.position = "absolute";
+//     }
+//   }
+// });
 // 2900 3450 4300 5200first.style.position = "static";
 // first.style.position = "sticky";
 // first.style.top = "0";
