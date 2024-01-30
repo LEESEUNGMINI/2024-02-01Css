@@ -7,10 +7,22 @@ html {
   box-sizing: border-box;
   font-family: "Noto Sans KR", sans-serif;
   scroll-behavior: smooth;
+  text-decoration: none;
 }
 a {
   scroll-behavior: smooth;
 }
+#motion_i .view_span {
+  position: absolute;
+  background-color: rgba(0, 112, 205, 0.2); /* 반투명 파란색 */
+  width: 30px; /* 원하는 크기로 조절하세요 */
+  height: 30px; /* 원하는 크기로 조절하세요 */
+  border-radius: 50%;
+  top: -30px; /* 화살표 위로 위치 조절 */
+  left: 70px; /* 화살표와의 거리 조절 */
+  transition: all 0.3s ease-in-out; /* 부드러운 효과를 위한 transition 속성 추가 */
+}
+
 /* 헤더 */
 header {
   width: 100%;
@@ -191,12 +203,11 @@ header {
 /* <!-- 인풋 검색창 --> */
 #input_div {
   width: 100%;
-  height: 80px;
-  background: #e4f2fe;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
+
 #input_div input {
   width: 95%;
   height: 45px;
@@ -297,20 +308,14 @@ header {
   align-items: center;
   justify-content: center;
 }
-#motion span {
-  position: absolute;
-  display: inline-block;
-  left: 63px;
-  top: -8px;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  background: rgba(204, 226, 242, 0.4);
-  cursor: pointer;
-}
 @media screen and (max-width: 429px) {
-  #motion span {
+  #motion_i .view_span {
     display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  #motion_i .view_span {
+    top: -4px;
   }
 }
 

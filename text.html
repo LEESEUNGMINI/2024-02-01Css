@@ -1,36 +1,242 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      overflow: hidden;
-      height: 200vh; /* 페이지의 세로 크기를 늘려 스크롤이 가능하도록 함 */
-      background-color: #f0f0f0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .circle {
-      width: 100vw;
-      height: 100vw;
-      background-color: #3498db;
-      border-radius: 50%;
-      position: absolute;
-      bottom: 0;
-      transition: transform 0.5s ease-in-out;
-    }
-  </style>
-</head>
-<script>
-    window.addEventListener('scroll', function() {
-      const scrollValue = window.scrollY;
-      const circle = document.querySelector('.circle');
-      circle.style.transform = 'translateY(' + scrollValue * 0.5 + 'px)';
-    });
-  </script>
-<body>
-  <div class="circle"></div>
+<div class="footer-wrapper">
+  <!-- S:footer-wrapper-->
+  <div class="reorg-bottom-wrapper">
+    <div class="reorg-bottom-wrapper__footer">
+      <div class="reorg-bottom-wrapper__footer-container">
+        <div class="reorg-bottom-wrapper__footer-content">
+          <p class="reorg-bottom-wrapper__ci">
+            <img
+              src="/images/reorg/common/reorg-bottom-wrapper__ci-631e28f6f4b120963a66a1ea40a0ee2f.svg"
+              alt="HANSOL 한솔모두의봄"
+            />
+          </p>
+          <ul class="reorg-bottom-wrapper__fnb-list">
+            <li class="reorg-bottom-wrapper__fnb-item">
+              <a href="/brandMain" class="reorg-bottom-wrapper__fnb-link"
+                >브랜드 소개</a
+              >
+            </li>
+            <li class="reorg-bottom-wrapper__fnb-item">
+              <a href="/footer/findTerms" class="reorg-bottom-wrapper__fnb-link"
+                >이용약관</a
+              >
+            </li>
+            <li class="reorg-bottom-wrapper__fnb-item">
+              <a
+                href="/footer/findPrivacy"
+                class="reorg-bottom-wrapper__fnb-link -em"
+                >개인정보처리방침</a
+              >
+            </li>
+            <li class="reorg-bottom-wrapper__fnb-item">
+              <a
+                href="/footer/findNoEmail"
+                class="reorg-bottom-wrapper__fnb-link"
+                >이메일 무단수집거부</a
+              >
+            </li>
+            <li class="reorg-bottom-wrapper__fnb-item">
+              <a
+                href="/gd/notice/foNoticeList"
+                class="reorg-bottom-wrapper__fnb-link"
+                >공지사항</a
+              >
+            </li>
+            <li class="reorg-bottom-wrapper__fnb-item">
+              <a
+                href="/partners/findPartnersDetail"
+                class="reorg-bottom-wrapper__fnb-link"
+                >파트너스</a
+              >
+            </li>
+          </ul>
+          <ul class="reorg-bottom-wrapper__info-list">
+            <li class="reorg-bottom-wrapper__info-item">
+              한솔모두의봄 주식회사
+            </li>
+            <li class="reorg-bottom-wrapper__info-item">대표이사 : 양승재</li>
+            <li class="reorg-bottom-wrapper__info-item">
+              개인정보취급관리자 : 임행운
+            </li>
+            <li class="reorg-bottom-wrapper__info-item">
+              주소 : 서울특별시 마포구 마포대로 78 (도화동, 자람빌딩15층)
+            </li>
+            <li class="reorg-bottom-wrapper__info-item">
+              대표전화 : 1666-0949
+            </li>
+            <li class="reorg-bottom-wrapper__info-item">
+              사업자등록번호 : 848-87-02639
+            </li>
+            <li class="reorg-bottom-wrapper__info-item">
+              통신판매신고번호 : 제 2022-서울마포-3703호
+              <button
+                type="button"
+                class="reorg-bottom-wrapper__info-item-button"
+                onclick="HSHD.namespace.front.pc.showWindowPopup('http://www.ftc.go.kr/bizCommPop.do?wrkr_no=8488702639', 750, 650)"
+              >
+                사업자 정보 확인
+              </button>
+            </li>
+          </ul>
+          <div class="reorg-bottom-wrapper__safety-service">
+            <p class="reorg-bottom-wrapper__safety-service-title">
+              구매안전서비스 제공안내
+            </p>
+            <button
+              type="button"
+              class="reorg-bottom-wrapper__safety-service-button"
+              onclick="HSHD.namespace.front.pc.showWindowPopup('https://mark.inicis.com/mark/escrow_popup_v3.php?mid=vhomdeco01', 480, 640)"
+            >
+              가입사실 확인
+            </button>
+            <p class="reorg-bottom-wrapper__safety-service-description">
+              한솔봄은 고객님의 안전거래를 위해 무통장입금 및 실시간계좌이체
+              주문에 KG이니시스의 에스크로 구매안전서비스를 자동 적용하고
+              있습니다.
+            </p>
+          </div>
+          <p class="reorg-bottom-wrapper__copyright">
+            Copyright Hansol MODU 한솔봄 All rights reserved. 본 사이트의
+            콘텐츠는 저작권법의 보호를 받는 바 무단 전재, 복사, 배포 등을
+            금합니다.
+          </p>
+        </div>
+        <div class="reorg-bottom-wrapper__footer-content">
+          <div
+            class="reorg-bottom-wrapper__family-site"
+            data-event-state="closer"
+          >
+            <button
+              type="button"
+              class="reorg-bottom-wrapper__family-site-trigger"
+              onclick="
+                              document.querySelector('.reorg-bottom-wrapper__family-site').setAttribute(
+                                  'data-event-state',
+                                  document.querySelector('.reorg-bottom-wrapper__family-site').getAttribute('data-event-state') != 'opener' ? 'opener' : 'closer'
+                              );
+                          "
+            >
+              family site
+            </button>
+            <ul class="reorg-bottom-wrapper__family-site-list">
+              <li class="reorg-bottom-wrapper__family-site-item">
+                <a
+                  href="http://www.hansol.com"
+                  target="_blank"
+                  class="reorg-bottom-wrapper__family-site-link"
+                  >한솔그룹</a
+                >
+              </li>
+              <li class="reorg-bottom-wrapper__family-site-item">
+                <a
+                  href="http://www.hansolpaper.co.kr"
+                  target="_blank"
+                  class="reorg-bottom-wrapper__family-site-link"
+                  >한솔제지</a
+                >
+              </li>
+              <li class="reorg-bottom-wrapper__family-site-item">
+                <a
+                  href="http://www.hansolhomedeco.com"
+                  target="_blank"
+                  class="reorg-bottom-wrapper__family-site-link"
+                  >한솔홈데코</a
+                >
+              </li>
+              <li class="reorg-bottom-wrapper__family-site-item">
+                <a
+                  href="http://www.hansolchemical.com"
+                  target="_blank"
+                  class="reorg-bottom-wrapper__family-site-link"
+                  >한솔케미칼</a
+                >
+              </li>
+              <li class="reorg-bottom-wrapper__family-site-item">
+                <a
+                  href="http://www.hansolpns.com"
+                  target="_blank"
+                  class="reorg-bottom-wrapper__family-site-link"
+                  >한솔PNS</a
+                >
+              </li>
+              <li class="reorg-bottom-wrapper__family-site-item">
+                <a
+                  href="http://www.hansoltechnics.com"
+                  target="_blank"
+                  class="reorg-bottom-wrapper__family-site-link"
+                  >한솔테크닉스</a
+                >
+              </li>
+              <li class="reorg-bottom-wrapper__family-site-item">
+                <a
+                  href="http://www.hansoleme.com"
+                  target="_blank"
+                  class="reorg-bottom-wrapper__family-site-link"
+                  >한솔EME</a
+                >
+              </li>
+              <li class="reorg-bottom-wrapper__family-site-item">
+                <a
+                  href="http://www.hansollogistics.com"
+                  target="_blank"
+                  class="reorg-bottom-wrapper__family-site-link"
+                  >한솔로지스틱스</a
+                >
+              </li>
+              <li class="reorg-bottom-wrapper__family-site-item">
+                <a
+                  href="http://www.hansolinticube.com"
+                  target="_blank"
+                  class="reorg-bottom-wrapper__family-site-link"
+                  >한솔인티큐브</a
+                >
+              </li>
+              <li class="reorg-bottom-wrapper__family-site-item">
+                <a
+                  href="https://www.hansolpapertech.co.kr"
+                  target="_blank"
+                  class="reorg-bottom-wrapper__family-site-link"
+                  >한솔페이퍼텍</a
+                >
+              </li>
+            </ul>
+          </div>
+          <ul class="reorg-bottom-wrapper__sns-list">
+            <li class="reorg-bottom-wrapper__sns-item">
+              <a
+                href="https://www.instagram.com/official_vhom/"
+                target="_blank"
+                class="reorg-bottom-wrapper__sns-link"
+                aria-label="인스타그램 새 창 열림"
+              ></a>
+            </li>
+            <li class="reorg-bottom-wrapper__sns-item">
+              <a
+                href="https://www.youtube.com/channel/UCXIte6LxUFSQ-8TPPRBCwqg"
+                target="_blank"
+                class="reorg-bottom-wrapper__sns-link"
+                aria-label="유튜브 새 창 열림"
+              ></a>
+            </li>
+            <li class="reorg-bottom-wrapper__sns-item">
+              <a
+                href="https://blog.naver.com/hansol_vhom"
+                target="_blank"
+                class="reorg-bottom-wrapper__sns-link"
+                aria-label="네이버 블로그 새 창 열림"
+              ></a>
+            </li>
+            <li class="reorg-bottom-wrapper__sns-item">
+              <a
+                href="https://www.facebook.com/vhom.hansol"
+                target="_blank"
+                class="reorg-bottom-wrapper__sns-link"
+                aria-label="페이스북 새 창 열림"
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
