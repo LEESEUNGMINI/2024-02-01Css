@@ -313,9 +313,15 @@ header {
     display: none;
   }
 }
+
 @media screen and (max-width: 800px) {
   #motion_i .view_span {
     top: -4px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #none_class {
+    display: none;
   }
 }
 

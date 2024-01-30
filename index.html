@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
   </head>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <style>
@@ -502,62 +505,45 @@
       </div>
     </section>
     <!-- 푸터 -->
-    <footer style="width: 100%; display: flex; justify-content: center;">
-      <!-- 한솔데코 -->
-      <div style="width: 100%; max-width: 1300px;">
-      <div style="width: 100%;">
-        <p>
-          인테리어를 통해 행복한 공간과 경험을 <br />
-          제공하는 <b>한솔봄</b>
-        </p>
-      </div>
-      <!-- 소개 -->
-      <div>
-        <span style="color: #959795">대표이사 </span><span>양승재</span><br />
-        <span style="color: #959795">주소</span>
-        <span>서울특별시 마포구 마포대로 78 (도화동, 자람빌딩15층)</span><br />
-        <span style="color: #959795">문의</span>
-        <span>1666-0949</span><br />
-        <span style="color: #959795">대표번호</span> <span>1666-0949</span
-        ><br />
-        <span style="color: #959795">사업자등록번호</span>
-        <span>848-87-02639</span><br />
-      </div>
-      <!-- 개인처리 방침 -->
-      <div>
-        <p style="font-size: 15px">
-          Copyright ⓒ 한솔봄. All Rights Reserved.
-        </p>
-        <span>개인정보처리방침</span> <span>이용약관</span>
-      </div>
+    <footer class="footer bg-light py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="https://www.vhom.co.kr/images/reorg/common/reorg-bottom-wrapper__ci-631e28f6f4b120963a66a1ea40a0ee2f.svg" alt="" class="mb-3">
+            <p class="text-muted" style="font-size: 12px;">&copy; Copyright Hansol</p>
+          </div>
+          
+          <div id="none_class" class="col-md-2">
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">브랜드 소개</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">이용약관</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">개인정보처리방침</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">이메일 무단수집거부</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">공지사항</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">파트너스</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-md-4">
+       
+            <p>한솔모두의봄 주식회사</p>
+            <p>대표이사: 양승재</p>
+            <p>개인정보취급관리자: 임행운</p>
+            <p>주소: 서울특별시 마포구 마포대로 78 (도화동, 자람빌딩15층)</p>
+            <p>대표전화: 1666-0949</p>
+            <p>사업자등록번호: 848-87-02639</p>
+            <p>통신판매신고번호: 제 2022-서울마포-3703호</p>
+          </div>
+          
+        
+        </div>
       </div>
     </footer>
+  <!-- 스크립트 -->
     <script src="./jQury.js"></script>
     <script src="./slide.js"></script>
     <script src="./scroll.js"></script>
     <script src="script.js"></script>
-    <script>
-var scrollAmount = 0;
-var previousScrollTop = 0;
 
-window.addEventListener('scroll', function() {
-  var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-  
-  if (currentScroll > previousScrollTop) {
-    // 스크롤 다운
-    scrollAmount += (currentScroll - previousScrollTop);
-  } else {
-    // 스크롤 업
-    scrollAmount -= (previousScrollTop - currentScroll);
-  }
-  
-  window.scrollTo({
-    top: scrollAmount,
-    behavior: 'smooth'
-  });
-  
-  previousScrollTop = currentScroll;
-});
-    </script>
   </body>
 </html>
