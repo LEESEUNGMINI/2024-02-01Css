@@ -8,6 +8,7 @@ html {
   font-family: "Noto Sans KR", sans-serif;
   scroll-behavior: smooth;
   text-decoration: none;
+  list-style: none;
 }
 a {
   scroll-behavior: smooth;
@@ -316,7 +317,7 @@ header {
 
 @media screen and (max-width: 800px) {
   #motion_i .view_span {
-    top: -4px;
+    top: 2px;
   }
 }
 @media screen and (max-width: 768px) {
